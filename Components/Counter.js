@@ -1,20 +1,31 @@
 import styles from '../styles/Counter.module.css';
 import { connect } from "react-redux";
-import { increment, decrement, saveChanges, dataChanged } from '../store/actions/counterActions';
+import { /*increment, decrement,*/ saveChanges, dataChanged } from '../store/actions/counterActions';
 import { useEffect, useState } from 'react';
 
 const Counter = (props) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    console.log(props.isDataChanged);
     if (props.isDataChanged === true) {
-      window.addEventListener('beforeunload', function (e) {
+      window.addEventListener('beforeunload', (e) => {
         e.preventDefault();
         e.returnValue = '';
       });
 
+      window.addEventListener('blur', (e) => {
+        e.preventDefault();
+        document.title = "Unsaved Changes :(";
+      });
+
       window.onbeforeunload = function () { return "Navigating away will lose the changes you've made to your code." };
     }
+    else {
+      window.addEventListener("focus", () => {
+        document.title = "";
+    });
+    }    
   });
 
   const handleClick = (symbol) => {

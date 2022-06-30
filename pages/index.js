@@ -18,6 +18,12 @@ const Home = (props) => {
         setIsClicked(props.isDataChanged);
     }
 
+    useEffect(() => {
+        window.addEventListener("blur", () => {
+            document.title = "";
+        });
+    })
+
     console.log("isDataChanged: " + props.isDataChanged + ", isClicked: " + isClicked);
 
     useEffect(() => {
@@ -36,7 +42,7 @@ const Home = (props) => {
         }
     }, [isClicked]);
 
-    if(props.isDataChanged === false) {
+    if (props.isDataChanged === false) {
         activeTab = newValue;
     }
 
