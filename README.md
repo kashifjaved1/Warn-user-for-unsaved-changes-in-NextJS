@@ -2,5 +2,6 @@
 
 1. Changes Tab
 2. Closes Tab
-3. Navigate to a url
-4. Navigate to some other part of the application.
+3. Reload Tab
+4. Navigate to a url
+5. Navigate to some other part of the application.
