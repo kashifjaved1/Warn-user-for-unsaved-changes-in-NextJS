@@ -6,12 +6,12 @@ files:
 hooks:
   AfterInstall: 
     - location: deployScripts/installDependencies.sh
-      timeout: 100
+      timeout: 300
       runas: root
     - location: deployScripts/start_server.sh
-      timeout: 100
+      timeout: 300
       runas: root
   ApplicationStart:
     - location: deployScripts/start_app.sh
-      timeout: 100
+      timeout: 300
       runat: root
