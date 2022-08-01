@@ -1,5 +1,5 @@
-sudo apt update
-sudo apt install -y apache2
-sudo apt install -y nodejs
-sudo apt install -y npm
-sudo npm install
+apt update
+apt install -y apache2
+apt install -y nodejs
+apt install -y npm
+npm install

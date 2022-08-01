@@ -14,16 +14,28 @@ BeforeInstall:
 
     - location: deployScripts/stop_server.sh
 
+      timeout: 100
+
+      runas: root
+
  AfterInstall: 
 
     - location: deployScripts/installDependencies.sh
 
-      timeout: 30
+      timeout: 100
 
       runas: root
 
     - location: deployScripts/start_server.sh
 
-      timeout: 30
+      timeout: 100
 
       runas: root
+
+ApplicationStart:
+
+    - location: deployScripts/start_app.sh
+
+    timeout: 100
+
+    runat: root
