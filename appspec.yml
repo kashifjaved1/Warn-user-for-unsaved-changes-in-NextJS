@@ -1,41 +1,21 @@
 version: 1.0
-
 os: linux
-
 files: 
-
   - source: /
-
     destination: /var/www/html/
-
 hooks:
-
-BeforeInstall: 
-
+  BeforeInstall: 
     - location: deployScripts/stop_server.sh
-
       timeout: 100
-
       runas: root
-
- AfterInstall: 
-
+  AfterInstall: 
     - location: deployScripts/installDependencies.sh
-
       timeout: 100
-
       runas: root
-
     - location: deployScripts/start_server.sh
-
       timeout: 100
-
       runas: root
-
-ApplicationStart:
-
+  ApplicationStart:
     - location: deployScripts/start_app.sh
-
     timeout: 100
-
     runat: root
