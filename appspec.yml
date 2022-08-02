@@ -8,6 +8,13 @@ hooks:
     - location: deployScripts/installDependencies.sh
       timeout: 300
       runas: root
+  AfterInstall: 
+    - location: deployScripts/setup_project.sh
+      timeout: 300
+      runas: root
+    # - location: deployScripts/start_server.sh
+    #   timeout: 300
+    #   runas: root
   ApplicationStart:
     - location: deployScripts/start_app.sh
       timeout: 300
