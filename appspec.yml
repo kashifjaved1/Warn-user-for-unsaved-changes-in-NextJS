@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /workspace/
+    destination: /var/www/html/
 hooks:
   BeforeInstall: 
     - location: deployScripts/installDependencies.sh
