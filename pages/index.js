@@ -48,7 +48,7 @@ const Home = (props) => {
 
     return (
         <>
-            <ul class="nav nav-tabs">
+            <ul className="nav nav-tabs">
                 <li id="1" className='' onClick={() => handleTabClick(1, 2)}><a>Counter</a></li>
                 <li id="2" className='' onClick={() => handleTabClick(2, 1)}><a>Hello World</a></li>
             </ul>

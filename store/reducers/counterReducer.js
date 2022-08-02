@@ -18,7 +18,7 @@ const counterReducer = (state = initialState, action) => {
         case actionTypes.DATA_CHANGED: 
             return updateProperties(state, { isDataChanged: action.payload });
 
-        case actionTypes.SAVE_CHANGE:
+        case actionTypes.SAVE_CHANGES:
             return updateProperties(state, {count: action.payload, isDataChanged: false});
 
         default:
