@@ -5,4 +5,4 @@
 # npm install -g n
 # n lts
 service codedeploy-agent restart
-# rm -rf /var/www/html/*
+rm -rf /var/www/html/*
