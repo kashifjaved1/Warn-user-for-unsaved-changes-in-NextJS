@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /var/www/html/
+    destination: /workspace/
 hooks:
   BeforeInstall: 
     - location: deployScripts/installDependencies.sh
@@ -12,9 +12,9 @@ hooks:
     - location: deployScripts/setup_project.sh
       timeout: 300
       runas: root
-    - location: deployScripts/start_server.sh
-      timeout: 300
-      runas: root
+    # - location: deployScripts/start_server.sh
+    #   timeout: 300
+    #   runas: root
   ApplicationStart:
     - location: deployScripts/start_app.sh
       timeout: 300
