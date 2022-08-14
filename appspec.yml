@@ -12,22 +12,22 @@ permissions:
       - file
 hooks:
   BeforeInstall:
-    - location: scripts/install.sh
+    - location: deployScripts/AB_Scripts/install.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/post_install.sh
+    - location: deployScripts/AB_Scripts/post_install.sh
       timeout: 600
       runas: ubuntu
   ApplicationStart:
-    - location: scripts/run.sh
+    - location: deployScripts/AB_Scripts/run.sh
       timeout: 120
       runas: ubuntu
   ApplicationStop:
-    - location: scripts/stop.sh
+    - location: deployScripts/AB_Scripts/stop.sh
       timeout: 120
       runas: ubuntu
   ValidateService:
-    - location: scripts/validate.sh
+    - location: deployScripts/AB_Scripts/validate.sh
       timeout: 60
       runas: ubuntu
