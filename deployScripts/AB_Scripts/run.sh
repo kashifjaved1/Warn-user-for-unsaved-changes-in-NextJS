@@ -4,4 +4,5 @@ if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
 fi
 
 cd ~/node
+npm run build
 pm2 start server.js
