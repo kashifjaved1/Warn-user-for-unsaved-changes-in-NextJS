@@ -1,21 +1,33 @@
 version: 0.0
 os: linux
-files: 
+files:
   - source: /
-    destination: /var/www/html/
+    destination: /home/ubuntu/node
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file
 hooks:
-  BeforeInstall: 
-    - location: deployScripts/installDependencies.sh
+  BeforeInstall:
+    - location: scripts/install.sh
       timeout: 300
       runas: root
-  AfterInstall: 
-    - location: deployScripts/setup_project.sh
-      timeout: 300
-      runas: root
-    # - location: deployScripts/start_server.sh
-    #   timeout: 300
-    #   runas: root
+  AfterInstall:
+    - location: scripts/post_install.sh
+      timeout: 600
+      runas: ubuntu
   ApplicationStart:
-    - location: deployScripts/start_app.sh
-      timeout: 300
-      runat: root
+    - location: scripts/run.sh
+      timeout: 120
+      runas: ubuntu
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 120
+      runas: ubuntu
+  ValidateService:
+    - location: scripts/validate.sh
+      timeout: 60
+      runas: ubuntu
