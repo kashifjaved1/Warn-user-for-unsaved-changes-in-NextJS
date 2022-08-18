@@ -23,10 +23,10 @@ hooks:
     - location: deployScripts/AB_Scripts/run.sh
       timeout: 120
       runas: ubuntu
-  ApplicationStop:
-    - location: deployScripts/AB_Scripts/stop.sh
-      timeout: 120
-      runas: ubuntu
+  # ApplicationStop:
+  #   - location: deployScripts/AB_Scripts/stop.sh
+  #     timeout: 120
+  #     runas: ubuntu
   ValidateService:
     - location: deployScripts/AB_Scripts/validate.sh
       timeout: 60
