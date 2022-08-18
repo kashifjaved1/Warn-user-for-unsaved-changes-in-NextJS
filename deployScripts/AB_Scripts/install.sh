@@ -12,4 +12,4 @@ apt install npm -y
 # install pm2 module globaly
 npm install -g pm2
 # pm2 update
-rm -rf /home/ubuntu/node
+rm -rf /home/ubuntu/node/
