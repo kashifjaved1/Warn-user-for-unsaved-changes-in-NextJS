@@ -13,4 +13,3 @@ node -v
 
 # installing project dependencies and building project
 npm install
-npm run build
