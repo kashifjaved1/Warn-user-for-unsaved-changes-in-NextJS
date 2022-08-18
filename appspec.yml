@@ -22,12 +22,12 @@ hooks:
   ApplicationStart:
     - location: deployScripts/AB_Scripts/run.sh
       timeout: 120
-      runas: ubuntu
+      runas: root
   # ApplicationStop:
   #   - location: deployScripts/AB_Scripts/stop.sh
   #     timeout: 120
-  #     runas: ubuntu
+  #     runas: root
   ValidateService:
     - location: deployScripts/AB_Scripts/validate.sh
       timeout: 60
-      runas: ubuntu
+      runas: root
