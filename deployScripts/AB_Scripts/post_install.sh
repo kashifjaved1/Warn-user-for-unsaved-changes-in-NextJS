@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-cd ~/node
+cd /home/ubuntu/node
 npm install
