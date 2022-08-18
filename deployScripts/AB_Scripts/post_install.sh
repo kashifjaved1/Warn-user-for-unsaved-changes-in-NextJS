@@ -8,6 +8,7 @@ node -v
 npm install -g n
 n lts
 n prune
+hash -r
 node -v
 
 # installing project dependencies and building project
