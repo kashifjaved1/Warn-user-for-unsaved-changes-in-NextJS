@@ -3,3 +3,4 @@ set -e
 
 cd /home/ubuntu/node/
 npm install
+npm run build
