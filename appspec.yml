@@ -14,7 +14,7 @@ hooks:
   BeforeBlockTraffic:
     - location: deployScripts/testScripts/beforeBlockTraffic.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
   BeforeInstall:
     - location: deployScripts/testScripts/install1.sh
       timeout: 300
