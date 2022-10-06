@@ -11,16 +11,20 @@ permissions:
       - directory
       - file
 hooks:
+  BeforeBlockTraffic:
+    - location: deployScripts/testScripts/beforeBlockTraffic.sh
+      timeout: 300
+      runas: ubuntu
   BeforeInstall:
-    - location: deployScripts/AB_Scripts/install1.sh
+    - location: deployScripts/testScripts/install1.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: deployScripts/AB_Scripts/post_install1.sh
+    - location: deployScripts/testScripts/post_install1.sh
       timeout: 600
       runas: root
   ApplicationStart:
-    - location: deployScripts/AB_Scripts/run1.sh
+    - location: deployScripts/testScripts/run1.sh
       timeout: 120
       runas: root
   # ApplicationStop:
