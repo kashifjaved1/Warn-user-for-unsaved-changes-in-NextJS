@@ -5,7 +5,7 @@ const Helloworld = () => {
         <div className={styles.container}>
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Hello World!!!
+                    Hello World!!! Hurray, Yeppe.
                 </h1>
             </main>
         </div>
