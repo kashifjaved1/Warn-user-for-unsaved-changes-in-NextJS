@@ -12,15 +12,15 @@ permissions:
       - file
 hooks:
   BeforeInstall:
-    - location: deployScripts/testScripts/install1.sh
+    - location: deployScripts/AB_Scripts/install.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: deployScripts/testScripts/post_install1.sh
+    - location: deployScripts/AB_Scripts/post_install.sh
       timeout: 600
       runas: root
   ApplicationStart:
-    - location: deployScripts/testScripts/run1.sh
+    - location: deployScripts/AB_Scripts/run.sh
       timeout: 120
       runas: root
   # ApplicationStop:
