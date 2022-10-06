@@ -5,4 +5,4 @@ fi
 
 cd /home/ubuntu/node/
 # npm run build
-pm2 start server.js
+NODE_ENV=production pm2 start server.js
