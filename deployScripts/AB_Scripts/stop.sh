@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 # cd /home/ubuntu/node/
 # pm2 stop www || true

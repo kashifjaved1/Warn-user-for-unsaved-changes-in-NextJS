@@ -1,7 +1,6 @@
-#!/usr/bin/env bash
-set -e
-
+#!/bin/bash
 cd /home/ubuntu/node/
 
 # installing project dependencies and building project
 npm install
+npm run build
