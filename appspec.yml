@@ -11,10 +11,6 @@ permissions:
       - directory
       - file
 hooks:
-  BeforeBlockTraffic:
-    - location: deployScripts/testScripts/beforeBlockTraffic.sh
-      timeout: 300
-      runas: root
   BeforeInstall:
     - location: deployScripts/testScripts/install1.sh
       timeout: 300
